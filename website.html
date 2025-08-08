@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+  <!--@font-face {
+  font-family: 'Queen';
+  src:  url('/QueenSerifFree.ttf') format('ttf'),
+}-->
+    <title>Meine Website</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+	background-color: #333;
+        }
+
+        .arrow-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+    	   color: #ffffff;
+    	   content: '\8964'; 
+	}
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            padding: 20px;
+            scroll-behavior: smooth;
+            background-size: cover;
+            //background-position: center;
+            background-repeat: no-repeat;
+            transition: background-position 0.1s ease-in-out; /* Smooth transition */
+        }
+
+        .text {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+	    vertical-align: text-top;
+            color: #fff;
+            padding: 00px 0px;
+            scroll-behavior: smooth;
+	    background-color: #333;
+        }
+
+        .section h1 {
+	    font-family:MOELA light;
+            font-size: 70px;
+	    font-weight: normal;
+	    letter-spacing:4px;
+            margin-bottom: 5px;
+	    transform: scale(.9, 1);
+        }
+        .section p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+	    font-family:Goli medium;
+	    letter-spacing:2px;
+        }
+      
+    </style>
+
+</head>
+<body>
+
+  <h1> Hallo! </h1>
+
+</body>
+</html>
