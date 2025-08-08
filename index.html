@@ -13,7 +13,14 @@
             overflow-x: hidden;
 	background-color: #333;
         }
-
+        .content {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 100px 20px; /* Adjust padding to ensure the content is visible */
+            height: 100vh;
+            box-sizing: border-box;
+        }
         .arrow-down {
             position: absolute;
             bottom: 20px;
@@ -51,19 +58,6 @@
             transition: background-position 0.1s ease-in-out; /* Smooth transition */
         }
 
-        .text {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
-            align-items: center;
-	    vertical-align: text-top;
-            color: #fff;
-            padding: 00px 0px;
-            scroll-behavior: smooth;
-	    background-color: #333;
-        }
-
         .section h1 {
 	    font-family:MOELA light;
             font-size: 70px;
@@ -79,13 +73,221 @@
 	    font-family:Goli medium;
 	    letter-spacing:2px;
         }
-      
+
+	a.one {
+    	color: #fff;
+        font-size: 20px;
+   	text-decoration: none;
+	font-family:MOELA light;
+	}
+
+	a.one:hover {
+    	opacity: 0.4;
+        font-size: 20px;
+    	text-decoration:none; 
+    	cursor:pointer; 
+	font-family:MOELA light;
+	}
+
+	a.two {
+    	color: #fff;
+   	text-decoration: none;
+	font-size: 18px;
+	font-family:Goli medium; 
+	letter-spacing:2px;
+	}
+
+	a.two:hover {
+    	opacity: 0.4;
+    	text-decoration:none; 
+    	cursor:pointer; 
+	font-size: 18px;
+	font-family:Goli medium; 
+	letter-spacing:2px;
+	}
+
+	a.three {
+	margin: 5px;
+    	color: #fff;
+   	text-decoration: none;
+	font-size: 18px;
+	font-family:Goli medium; 
+	letter-spacing:2px;
+	border: 1px solid white;
+	padding: 8px 15px;
+	border-radius: 3px;
+	}
+
+	a.three:hover {
+	margin: 5px;
+    	color: #333;
+    	text-decoration:none; 
+    	cursor:pointer; 
+	font-size: 18px;
+	font-family:Goli medium; 
+	letter-spacing:2px;
+	border: 1px solid white;
+	border-radius: 3px;
+	padding: 8px 15px;
+	background-color: #fff;
+	}
+
+        .footer {
+	    font-family:MOELA light;
+            background-color: #333;
+            font-size: 18px;
+	    letter-spacing:2px;
+	    height: 40px;
+            color: #fff;
+            padding: 20px 0px;
+            text-align: center;
+	    line-height: 0.7;
+        }
+        .top-links {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 16px;
+	    letter-spacing:2px;
+	}
+        .top-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+	.img-cont {
+ 	    overflow: hidden;
+  	    position: absolute;
+  	    top: 120px;
+	}
+
+	.img-cont2 {
+ 	    overflow: hidden;
+  	    position: absolute;
+  	    top: 15px;
+	    left: 25px;
+	}
+
+	.img-cont3 {
+  	    display: flex;
+ 	    overflow: hidden;
+	    justify-content: center;
+	    padding: 20px;
+	}
     </style>
 
 </head>
 <body>
 
-  <h1> Hallo! </h1>
+<div class="section" style="background-image: url('Mainpage_Fotos/Bild1_test2.jpg');">
+    <!--<h1>ALEX VAY</h1>-->
+	<div class = "img-cont"> 
+		<img src="logopng.png" alt="AlexVayLogo" style= "
+		height: 280px;
+		width: 280px;
+		object-position: top 0px right 0px;"> 
+	</div>
+
+	<div class = "img-cont2"> 
+		<a class="one" href = "https://www.instagram.com/alexvay.music/"> <img src="Logos/INSTAGRAM.png" alt="Instagram" style= "
+		height: 35px;
+		width: 35px;
+		object-position: top 0px right 0px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" style= "
+		height: 35px;
+		width: 35px;
+		object-position: top 0px right 0px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" style= "
+		height: 35px;
+		width: 35px;
+		object-position: top 0px right 0px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" style= "
+		height: 35px;
+		width: 35px;
+		object-position: top 0px right 0px;
+		padding: 10px;"> </a>
+	</div>
+    <div class="arrow-down">&#8964;</div>
+</div>
+
+
+
+<div class="top-links">
+  <a class = "one" href="Mainpage.html">home</a>
+  <a class = "one" href="Musik.html">musik</a>
+  <a class = "one" href="übermich.html">über mich</a>
+  <a class = "one" href="#footer">kontakt</a>
+</div>
+
+
+
+<div id="oneyear" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
+    <h1>ONE YEAR EP</h1>
+    <a class = "three" href="oneyear.html"> projekt </a>
+    <a class = "three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen → </a>
+</div>
+
+<div id="musik" class="section" style="background-image: url('Mainpage_Fotos/Bild1_test.jpg');">
+   <h1 > MUSIK FÜR DIE DÄMMERUNG</h1>
+   <a class = "three" href="Musik.html"> vollständige diskografie </a>
+   <a class = "three" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8">anhören → </a>
+</div>
+
+<div id="übermich" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
+    <h1>INDIE MADE IN GERMANY</h1>
+   <a class = "three" href="übermich.html">über mich </a>
+</div>
+
+
+<div class="footer" id= "footer", style="height:50px;">
+    <p style="font-size:15px; font-weight:normal;"> Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825 </p>
+    <p> Kontakt: alex.vay.666@gmail.com </p>
+</div>
+<div class = "img-cont3"> 
+		<a class="one" href = "https://www.instagram.com/alexvay.music/"> <img src="Logos/INSTAGRAM.png" alt="Instagram" style= "
+		height: 35px;
+		width: 35px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" style= "
+		height: 35px;
+		width: 35px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" style= "
+		height: 35px;
+		width: 35px;
+		padding: 10px;"> </a>
+		<a class="one" href = "https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" style= "
+		height: 35px;
+		width: 35px;
+		padding: 10px;"> </a>
+	</div>
+<div class="footer" id= "footer", style="padding: 0;">
+    <p> &copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+</div>
+
+
+
+
+<script>
+    document.querySelector('.arrow-down').addEventListener('click', function() {
+        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    });
+
+    // Parallax effect for all sections
+    window.addEventListener('scroll', function() {
+        const scrollPos = window.scrollY;
+        const parallax = scrollPos * 0.1; // Adjust the speed here (0.1 is relatively slow)
+        document.querySelectorAll('.section').forEach(function(section) {
+            section.style.backgroundPositionY = `-${parallax}px`;
+       
+
+ });
+    });
+</script>
 
 </body>
 </html>
