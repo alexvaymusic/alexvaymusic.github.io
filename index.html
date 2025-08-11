@@ -138,64 +138,127 @@
       letter-spacing: 2px;
     }
     .top-links a { margin-right: 20px; }
+
+    /* Mobile Wrapper and Adjustments */
+
+    @media (max-width: 600px) {
+      .wrapper {
+        width: 100%;
+        padding: 0;
+      }
+
+      .section {
+        height: 100vh;
+        background-size: cover;
+	background-size: auto 130%;
+        background-position: center;
+        padding: 0px;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      background-repeat: no-repeat;
+      background-position: center center;
+      }
+
+      .section h1 {
+        font-size: 36px;
+        letter-spacing: 2px;
+      }
+
+      .section p {
+        font-size: 16px;
+        letter-spacing: 1px;
+      }
+
+      a.one, a.two {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      a.three {
+        font-size: 14px;
+        padding: 6px 10px;
+        letter-spacing: 1px;
+      }
+
+      .img-cont2 {
+	display: flex;
+	justify-content: center;
+  	width: 90%;
+  	height: 10%;
+	}
+
+      .icon {
+        height: 35px;
+        width: 35px;
+        padding: 10px 20px;
+      }
+
+      .top-links {
+	display: none;
+      }
+    }
   </style>
 </head>
 <body>
 
-<!-- Hero Section -->
-<div class="section" style="background-image: url('Mainpage_Fotos/Bild1_test2.jpg');">
-  <div class="img-cont">
-    <img src="logopng.png" alt="AlexVayLogo" style="height:280px; width:280px;">
+<div class="wrapper">
+
+  <!-- Hero Section -->
+  <div class="section" style="background-image: url('Mainpage_Fotos/Bild1_test2.jpg');">
+    <div class="img-cont">
+      <img src="logopng.png" alt="AlexVayLogo" style="height:280px; width:280px;">
+    </div>
+    <div class="img-cont2">
+      <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
+      <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
+      <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
+      <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
+    </div>
+    <div class="arrow-down">&#8964;</div>
   </div>
-  <div class="img-cont2">
+
+  <!-- Top Navigation -->
+  <div class="top-links">
+    <a class="one" href="Mainpage.html">home</a>
+    <a class="one" href="Musik.html">musik</a>
+    <a class="one" href="übermich.html">über mich</a>
+    <a class="one" href="#footer">kontakt</a>
+  </div>
+
+  <!-- Sections -->
+  <div id="oneyear" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
+    <h1>ONE YEAR EP</h1>
+    <a class="three" href="oneyear.html">projekt</a>
+    <a class="three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen →</a>
+  </div>
+
+  <div id="musik" class="section" style="background-image: url('Mainpage_Fotos/Bild1_test.jpg');">
+    <h1>MUSIK FÜR DIE DÄMMERUNG</h1>
+    <a class="three" href="Musik.html">vollständige diskografie</a>
+    <a class="three" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8">anhören →</a>
+  </div>
+
+  <div id="übermich" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
+    <h1>INDIE MADE IN GERMANY</h1>
+    <a class="three" href="übermich.html">über mich</a>
+  </div>
+
+  <!-- Contact Footer -->
+  <div class="footer" id="footer">
+    <p style="font-size:15px;">Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825;</p>
+    <p>Kontakt: hier email einfügen</p>
+  </div>
+  <div class="img-cont3">
     <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
     <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
     <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
     <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
   </div>
-  <div class="arrow-down">&#8964;</div>
-</div>
+  <div class="footer" style="padding: 20px;">
+    <p>&copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+  </div>
 
-<!-- Top Navigation -->
-<div class="top-links">
-  <a class="one" href="Mainpage.html">home</a>
-  <a class="one" href="Musik.html">musik</a>
-  <a class="one" href="übermich.html">über mich</a>
-  <a class="one" href="#footer">kontakt</a>
-</div>
-
-<!-- Sections -->
-<div id="oneyear" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
-  <h1>ONE YEAR EP</h1>
-  <a class="three" href="oneyear.html">projekt</a>
-  <a class="three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen →</a>
-</div>
-
-<div id="musik" class="section" style="background-image: url('Mainpage_Fotos/Bild1_test.jpg');">
-  <h1>MUSIK FÜR DIE DÄMMERUNG</h1>
-  <a class="three" href="Musik.html">vollständige diskografie</a>
-  <a class="three" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8">anhören →</a>
-</div>
-
-<div id="übermich" class="section" style="background-image: url('Mainpage_Fotos/Bild2_klein.jpg');">
-  <h1>INDIE MADE IN GERMANY</h1>
-  <a class="three" href="übermich.html">über mich</a>
-</div>
-
-<!-- Contact Footer -->
-<div class="footer" id="footer">
-  <p style="font-size:15px;">Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825;</p>
-  <p>Kontakt: Hier email einfügen</p>
-</div>
-<div class="img-cont3">
-  <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
-  <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
-  <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
-  <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
-</div>
-<div class="footer" style="padding: 20px;">
-  <p>&copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
-</div>
+</div> <!-- end wrapper -->
 
 <script>
   document.querySelector('.arrow-down').addEventListener('click', () => {
