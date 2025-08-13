@@ -1,324 +1,347 @@
 <!DOCTYPE html>
 <html lang="de">
-  <!--@font-face {
-  font-family: 'Queen';
-  src:  url('/QueenSerifFree.ttf') format('ttf'),
-}-->
-    <title>Meine Website</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Vay - über mich</title>
+<style>
+@font-face {
+    font-family: "ilyas";
+    src: url("ilyas/ilyas.otf") format("opentype"),
+}
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #333;
+  }
 
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-	background-color: #333;
-        }
-        .content {
-            position: relative;
-            text-align: center;
-            color: #fff;
-            padding: 100px 20px; /* Adjust padding to ensure the content is visible */
-            height: 100vh;
-            box-sizing: border-box;
-        }
-        .arrow-down {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            cursor: pointer;
-            animation: bounce 2s infinite;
-    	   color: #ffffff;
-    	   content: '\8964'; 
-	}
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            padding: 20px;
-            scroll-behavior: smooth;
-            background-size: cover;
-            //background-position: center;
-            background-repeat: no-repeat;
-            transition: background-position 0.1s ease-in-out; /* Smooth transition */
-        }
+  /* General section styles */
+  .section {
+    height: 56.25vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box;
+    background-size: 110% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-position 0.1s ease-in-out;
+    text-align: center;
+  }
 
-        .text {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
-            align-items: center;
-	    vertical-align: text-top;
-            color: #fff;
-            padding: 50px 0px;
-            scroll-behavior: smooth;
-	    background-color: #333;
-        }
+  .text {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 50px 0;
+    background-color: #333;
+  }
 
-        .section h1 {
-	    font-family:MOELA light;
-            font-size: 70px;
-	    font-weight: normal;
-	    letter-spacing:4px;
-            margin-bottom: 5px;
-	    transform: scale(.9, 1);
-        }
-        .section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-	    font-family:Goli medium;
-	    letter-spacing:2px;
-        }
+  .text h1, .text h2 {
+    font-family: "ilyas";
+    letter-spacing: 4px;
+    text-align: center;
+  }
 
-        .section p.kleiner {
-            font-size: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-	    font-family:Goli medium;
-	    letter-spacing:1px;
-	    line-height: 22px;	    
-	    vertical-align: text-top;
-	    text-align:center;
-            justify-content: top;
-        }
+  .section h1, .section h2 {
+    font-family: "ilyas";
+    letter-spacing: 4px;
+    margin: 0 0 5px;
+  }
 
-        .text p {
-            font-size: 16px;
-            max-width: 800px;
-	    margin: 0px;
-	    font-family:Goli medium;
-	    line-height: 22px;
-	    letter-spacing:1px;
-	    vertical-align: text-top;
-	    text-align:center;
-        }
+  .section h1, .text h1 {
+    font-size: 90px;
+    font-weight: normal;
+  }
+
+  .section h2, .text h2 {
+    font-size: 40px;
+  }
+
+  .section p, .text p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0;
+    font-family: "Goli medium";
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .section p.kleiner {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 22px;
+  }
+
+  /* Link styles */
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  a.one, a.two {
+    font-family: "Goli medium";
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    /* IMPORTANT: no padding here, like on mainpage */
+    transform: scale(1, 1);
+  }
+  a.two { font-family: "Goli medium"; font-size: 18px; }
+  a.one:hover, a.two:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  a.three {
+    display: inline-block;
+    margin: 5px;
+    font-family: "Goli medium";
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 3px;
+  }
+  a.three:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Logo & icon containers (match mainpage spacing) */
+  .img-cont, .img-cont2, .img-cont3 {
+    overflow: hidden;
+    position: absolute;
+  }
+  .img-cont { top: 20%; }
+  .img-cont2 { top: 15px; left: 25px; }
+  .img-cont3 {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* same as mainpage */
+  }
+  .icon {
+    height: 35px;
+    width: 35px;
+    padding: 10px; /* same as mainpage */
+  }
+
+  /* Arrow animation */
+  .arrow-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    color: #fff;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+
+  /* Footer (exactly like mainpage) */
+  .footer {
+    padding: 20px;
+    font-family: "Goli medium";
+    background-color: #333;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    transform: scale(0.9, 1);
+  }
+  .footer p { margin: 0.5em 0; }
+
+  /* Navigation */
+  .top-links {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    letter-spacing: 2px;
+  }
 
 
-	a.one {
-    	color: #fff;
-        font-size: 20px;
-   	text-decoration: none;
-	font-family:MOELA light;
-	}
 
-	a.one:hover {
-    	opacity: 0.4;
-        font-size: 20px;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-family:MOELA light;
-	}
 
-	a.two {
-    	color: #fff;
-   	text-decoration: none;
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	}
 
-	a.two:hover {
-    	opacity: 0.4;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	}
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .wrapper { width: 100%; padding: 0; }
 
-	a.three {
-	margin: 5px;
-    	color: #fff;
-   	text-decoration: none;
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	border: 1px solid white;
-	padding: 8px 15px;
-	border-radius: 3px;
-	}
+    .section {
+      height: 100vh;
+      background-size: auto 130%;
+      background-position: center center;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      background-repeat: no-repeat;
+    }
 
-	a.three:hover {
-	margin: 5px;
-    	color: #333;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	border: 1px solid white;
-	border-radius: 3px;
-	padding: 8px 15px;
-	background-color: #fff;
-	}
+    .section h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
 
-        .footer {
-	    font-family:MOELA light;
-            background-color: #333;
-            font-size: 18px;
-	    letter-spacing:2px;
-	    height: 40px;
-            color: #fff;
-            padding: 20px 0px;
-            text-align: center;
-	    line-height: 0.7;
-        }
+    .section h2 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+    .section p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 30px 40px;
+    }
 
-        .top-links {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            font-size: 16px;
-	    letter-spacing:2px;
-	}
-        .top-links a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 20px;
-        }
+    /* Footer behaviour 
+    .footer{
+      font-size: 14px;
+    } 
+    */
 
-	.img-cont {
- 	    overflow: hidden;
-  	    position: absolute;
-  	    top: 120px;
-	}
+    /* .text mobile behavior */
+    .text {
+      height: auto;
+      padding: 30px 40px;
+    }
+    .text h1 { font-size: 36px; letter-spacing: 2px; }
+    .text h2 { font-size: 28px; letter-spacing: 2px; }
+    .text p  { font-size: 14px; letter-spacing: 1px; line-height: 20px; }
+    .section p.kleiner {font-size: 14px; letter-spacing: 1px; line-height: 20px;}
 
-	.img-cont2 {
- 	    overflow: hidden;
-  	    position: absolute;
-  	    top: 15px;
-	    left: 25px;
-	}
+    a.one, a.two { font-size: 14px; letter-spacing: 1px; }
+    a.three { font-size: 14px; padding: 6px 10px; letter-spacing: 1px; }
 
-	.img-cont3 {
-  	    display: flex;
- 	    overflow: hidden;
-	    justify-content: center;
-	    padding: 20px;
-	}
-    </style>
+    .img-cont2 {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      height: 10%;
+    }
+    .icon { padding: 10px 20px; } /* same as mainpage mobile */
 
+    .top-links { display: none; }
+
+    .mobile {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      letter-spacing: 2px;
+      border: 2px solid white;
+      padding: 8px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  @media (min-width: 601px) {
+    .mobile {display: none;}
+  }
+</style>
 </head>
 <body>
 
-<div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild4.JPG');">
+<div class="wrapper">
+
+
+  <!-- Hero Section -->
+  <div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild4.jpg');">
     <h1>I MAKE WEIRD MUSIC</h1>
-    <p>über mich</p>
-    <div class="arrow-down" style= "opacity:0">&#8964;</div>
-</div>
+    <p style = "padding: 0 0;">über mich</p>
+    <div class="arrow-down" style="opacity:0">&#8964;</div>
+  </div>
+
+  <!-- Top Navigation -->
+      <div class="mobile">
+      <a class="one" style="padding:10px; justify-content: flex-start;" href="Mainpage.html">home</a>
+    </div>
+  <div class="top-links">
+    <a class="one" style="padding:10px;" href="Mainpage.html">home</a>
+    <a class="one" style="padding:10px;" href="Musik.html">musik</a>
+    <a class="one" style="padding:10px;" href="übermich.html">über mich</a>
+    <a class="one" style="padding:10px;" href="#footer">kontakt</a>
+  </div>
 
 
 
-<div class="top-links">
-  <a class = "one" href="Mainpage.html">home</a>
-  <a class = "one" href="Musik.html">musik</a>
-  <a class = "one" href="übermich.html">über mich</a>
-  <a class = "one" href="#footer">kontakt</a>
-</div>
 
+  <!-- Sections -->
+  <div class="text">
+    <h2>WER IST NOCH WACH WENN DER MOND UNTERGEHT?</h2>
+    <p>4 Uhr morgens, Dämmerung - schon wieder die Nacht verloren und zu viel gedacht.</p>
+    <p>Wonach greifen und was loslassen?</p>
+    <p>Was fühlen und was vergessen?</p>
+    <p style="padding:20px;">Alex Vay ist verträumter Indie Pop mit eigenartigen Klängen und Rhythmen. Immer ein bisschen seltsam, immer ein bisschen in einer anderen Welt. Getragen von sanfter E-Gitarre erzählen die Texte von Nonkonformität, Queerness und dem Ringen mit dem eigenen Kopf. Dem Alleinsein mit sich selbst.</p>
+    <p>Ganz allein entsteht auch die Musik, vom Songwriting bis zum Mastering. Vielleicht nicht perfekt, aber immer ehrlich.</p>
+    <p>Wer ist noch wach, wenn der Mond untergeht?</p>
+  </div>
 
+  <div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild1_test.jpg');">
+    <h2>MUSIK MUSS DIVERS BLEIBEN</h2>
+    <p class="kleiner" style = "padding: 20px 20px;">Musik ist vorrangig: Kunst. Und Kunst ist immer ein Spiegel unseres Zeitgeists, ist immer politisch. Wir können die Kunst nicht von ihrem gesellschaftlichen Kontext, nie von ihrer Erschaffer:in trennen. Und dennoch ist Kunst nicht perfekt, sie kann anecken, aufwühlen, polarisieren - und all das soll sie. All das muss sie. Denn Kunst ohne eine Bedeutung, ohne Courage, ist nur ein Einknicken vor dem System, das sich in unserer heutigen Gesellschaft dem Individualismus eines jeden Menschen entgegenstellt.</p>
+    <p class="kleiner" style = "padding: 20px 20px;">Kunst muss frei bleiben. Kunst muss divers bleiben. Und Kunst muss von den Menschen kommen, in all ihrer Andersartigkeit. Nur so erhält sie ihren Wert.</p>
+  </div>
 
-<div id="bio" class="text">
-    <h2 style = "font-size: 40px; font-family:MOELA light;">WER IST NOCH WACH WENN DER MOND UNTERGEHT?</h2>
-    <p> 4 Uhr morgens, Dämmerung - schon wieder die Nacht verloren und zu viel gedacht.<p> 
-    <p> Wonach greifen und was loslassen? <p>
-    <p> Was fühlen und was vergessen? <p>
-    <p style="padding:20px;"> Alex Vay ist verträumter Indie Pop mit eigenartigen Klängen und Rhythmen. Immer ein bisschen seltsam, immer ein bisschen in einer anderen Welt. Getragen von sanfter E-Gitarre erzählen die Texte von Nonkonformität, Queerness und dem Ringen mit dem eigenen Kopf. Dem Alleinsein mit sich selbst. <p>
-    <p> Ganz allein entsteht auch die Musik, vom Songwriting bis zum Mastering. Vielleicht nicht perfekt, aber immer ehrlich. <p>
-    <p> Wer ist noch wach, wenn der Mond untergeht?</p>
-</div>
+  <div class="text">
+    <h2>ANDERES</h2>
+    <p>Neben der Musik ist Alex Vay auch als Grafikdesignerin und Fotografin tätig und begleitet mitunter andere Bands visuell in verschiedensten Bereichen von Film bis zu Artworks. Als klassisch ausgebildete Cellistin machte sie sich auch mit Komposition vertraut und komponiert orchestrale Soundtracks, u.A. für Hörspielprojekte.</p>
+    <p style="padding: 20px;">Für Anfragen bezüglich Fotografie, Grafikdesign, Soundtrackkomposition, nehme gerne Kontakt per Email auf.</p>
+    <p style="padding: 10px;">Ein paar kleine Soundbeispiele:</p>
+    <audio controls src="Subpage_übermich/Subpage_übermich_Audios/Cinematic.mp3"></audio>
+    <audio controls src="Subpage_übermich/Subpage_übermich_Audios/Strings.mp3"></audio>
+    <audio controls src="Subpage_übermich/Subpage_übermich_Audios/BigBand.mp3"></audio>
+  </div>
 
-
-
-<div id="musik" class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild1_test.jpg');">
-    <h2 style = "font-size: 40px; font-family:MOELA light;">MUSIK MUSS DIVERS BLEIBEN</h2>
-    <p class="kleiner"> Musik ist vorrangig: Kunst. Und Kunst ist immer ein Spiegel unseres Zeitgeists, ist immer politisch. Wir können die Kunst nicht von ihrem gesellschaftlichen Kontext, nie von ihrer Erschaffer:in trennen. Und dennoch ist Kunst nicht perfekt, nicht allwissend. Sie kann unsere verborgensten Gefühle offenbaren, herausschreien, anecken, aufwühlen, polarisieren - und all das soll sie. All das muss sie. Denn Kunst ohne eine Bedeutung, ohne Courage, ohne die Preisgabe der eigenen Gedanken, der eigenen Verletztlichkeit, wäre nicht mehr als ein Einknicken vor dem System, das sich in unserer heutigen Gesellschaft dem Individualismus eines jeden Menschen entgegenstellt.<p>
-<p class="kleiner"> Kunst muss frei bleiben. Kunst muss divers bleiben. Und Kunst muss von den Menschen kommen. Kann nur von Menschen kommen. Nur so erhält sie ihren Wert.</p>
-</div>
-
-<div id="bio" class="text">
-    <h2 style = "font-size: 40px; font-family:MOELA light;">ANDERES</h2>
-    <p> Neben der Musik ist Alex Vay auch als Grafikdesignerin und Fotografin tätig und begleitet mitunter andere Bands visuell in verschiedensten Bereichen von Film bis zu Artworks. Als klassisch ausgebildete Cellistin machte sie sich auch mit Komposition vertraut und komponiert orchestrale Soundtracks, u.A. für Hörspielprojekte.</p>
-<p style="padding: 20px;"> Für Anfragen bezüglich Fotografie, Grafikdesign, Soundtrackkomposition, nehme gerne Kontakt per Email auf.</p>
-<p style="padding: 10px;"> Ein paar kleine Soundbeispiele: </p>
-<audio controls src="Subpage_übermich_Audios/Cinematic.mp3" ></audio>
-<audio controls src="Subpage_übermich_Audios/Strings.mp3">Strings</audio>
-<audio controls src="Subpage_übermich_Audios/BigBand.mp3">Strings</audio>
-</div>
-
-
-
-<div id="musik" class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild1_test.jpg');">
+  <div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild1_test.jpg');">
     <h1>MEHR MUSIK</h1>
-   <a class = "three" href="Musik.html"> Komplette Diskografie </a>
-<a class = "three" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8">anhören → </a>
+    <a class="three" href="Musik.html">Komplette Diskografie</a>
+    <a class="three" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8">anhören →</a>
+  </div>
+
+  <!-- Contact Footer (exact same layout as mainpage) -->
+  <div class="footer" id="footer">
+    <p>Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825;</p>
+    <p>Kontakt: hier email einfügen</p>
+  </div>
+  <div class="img-cont3">
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
+    <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
+    <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
+  </div>
+  <div class="footer" style="padding: 20px;">
+    <p>&copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+  </div>
+
 </div>
-
-
-<div class="footer" id= "footer", style="height:50px;">
-    <p style="font-size:15px; font-weight:normal;"> Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825 </p>
-    <p> Kontakt: hier email adden </p>
-</div>
-<div class = "img-cont3"> 
-		<a class="one" href = "https://www.instagram.com/alexvay.music/"> <img src="Logos/INSTAGRAM.png" alt="Instagram" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-	</div>
-<div class="footer" id= "footer", style="padding: 0;">
-    <p> &copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
-</div>
-
-
-
 
 <script>
-    document.querySelector('.arrow-down').addEventListener('click', function() {
-        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    });
+  document.querySelector('.arrow-down').addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  });
 
-    // Parallax effect for all sections
-    window.addEventListener('scroll', function() {
-        const scrollPos = window.scrollY;
-        const parallax = scrollPos * 0.1; // Adjust the speed here (0.1 is relatively slow)
-        document.querySelectorAll('.section').forEach(function(section) {
-            section.style.backgroundPositionY = `-${parallax}px`;
-       
-
- });
+  window.addEventListener('scroll', function() {
+    const parallax = window.scrollY * 0.1;
+    document.querySelectorAll('.section').forEach(function(section) {
+      section.style.backgroundPositionY = `-${parallax}px`;
     });
+  });
 </script>
 
 </body>
 </html>
-
-
