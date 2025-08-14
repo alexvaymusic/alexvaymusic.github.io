@@ -1,317 +1,323 @@
 <!DOCTYPE html>
 <html lang="de">
-  <!--@font-face {
-  font-family: 'Queen';
-  src:  url('/QueenSerifFree.ttf') format('ttf'),
-}-->
-    <title>Meine Website</title>
+<head>
+  <meta charset="UTF-8">
+  <title>Meine Website</title>
+  <style>
+	@font-face {
+    font-family: "ilyas";
+    src: url("ilyas/ilyas.otf") format("opentype"),
+	}	
+    /* Global Styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #333;
+    }
 
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-	background-color: #333;
-        }
-        .content {
-            position: relative;
-            text-align: center;
-            color: #fff;
-            padding: 100px 20px; /* Adjust padding to ensure the content is visible */
-            height: 100vh;
-            box-sizing: border-box;
-        }
-        .arrow-down {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 40px;
-            cursor: pointer;
-            animation: bounce 2s infinite;
-    	   color: #ffffff;
-    	   content: '\8964'; 
-	}
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
-        .section {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            padding: 20px;
-            scroll-behavior: smooth;
-            background-size: cover;
-            //background-position: center;
-            background-repeat: no-repeat;
-            transition: background-position 0.1s ease-in-out; /* Smooth transition */
-        }
+    img {
+      display: block;
+      max-height: 100vh;
+      object-fit: cover;
+    }
 
-        .text {
-            height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
-            align-items: center;
-	    vertical-align: text-top;
-            color: #fff;
-            padding: 00px 0px;
-            scroll-behavior: smooth;
-	    background-color: #333;
-        }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
 
-	  .text2 {
-		height: 100vh;
-    		font-size: 40px;
-    		padding: 0px;
-            	text-align: center;
-		float: center;
-	   	font-family:MOELA light;
-		color: #fff;
-  	}
-	.lyrics{
-            font-size: 15px;
-            max-width: 800px;
-            margin: 00px auto;
-	    font-family:Goli medium;
-	}
+    /* Section Layout */
+    .section {
+      height: 56.25vw;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      background-size: 110% auto;
+      background-repeat: no-repeat;
+      background-position: top center;
+      transition: background-position 0.1s ease-in-out;
+      text-align: center;
+      box-sizing: border-box;
+    }
 
-        .section h1 {
-	    font-family:MOELA light;
-            font-size: 70px;
-	    font-weight: normal;
-	    letter-spacing:4px;
-            margin-bottom: 5px;
-	    transform: scale(.9, 1);
-        }
-        .section p {
-            font-size: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-	    font-family:Goli medium;
-	    letter-spacing:2px;
-        }
+    .section h1, .text h1 {
+      font-family: "ilyas";
+      letter-spacing: 4px;
+      font-size: 90px;
+      font-weight: normal;
+      margin: 0 0 5px;
+    }
 
-        .section p.kleiner {
-            font-size: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-	    font-family:Goli medium;
-	    letter-spacing:1px;
-	    line-height: 22px;	    
-	    vertical-align: text-top;
-	    text-align:center;
-            justify-content: top;
-        }
+    .section h2, .text h2 {
+      font-family: "ilyas";
+      letter-spacing: 4px;
+      font-size: 40px;
+      margin: 0 0 5px;
+    }
 
-        .text p {
-            font-size: 16px;
-            max-width: 800px;
-	    margin: 0px;
-	    font-family:Goli medium;
-	    line-height: 22px;
-	    letter-spacing:1px;
-	    vertical-align: text-top;
-	    text-align:center;
-        }
+    .section p, .text p {
+      font-family: "Goli medium";
+      text-align: center;
+      max-width: 800px;
+      line-height: 22px;
+      margin: 0;
+    }
 
+    .section p {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
 
-	a.one {
-    	color: #fff;
-        font-size: 20px;
-   	text-decoration: none;
-	font-family:MOELA light;
-	}
+    .section p.kleiner {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
 
-	a.one:hover {
-    	opacity: 0.4;
-        font-size: 20px;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-family:MOELA light;
-	}
+    /* Buttons & Links */
+    a.one, a.two, a.three {
+      font-family: "Goli medium";
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
 
-	a.two {
-    	color: #fff;
-   	text-decoration: none;
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	}
+    a.one:hover, a.two:hover {
+      opacity: 0.4;
+      cursor: pointer;
+    }
 
-	a.two:hover {
-    	opacity: 0.4;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	}
+    a.three {
+      display: inline-block;
+      margin: 5px;
+      border: 1px solid white;
+      padding: 8px 15px;
+      border-radius: 3px;
+    }
 
-	a.three {
-	margin: 5px;
-    	color: #fff;
-   	text-decoration: none;
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	border: 1px solid white;
-	padding: 8px 15px;
-	border-radius: 3px;
-	}
+    a.three:hover {
+      background-color: #fff;
+      color: #333;
+    }
 
-	a.three:hover {
-	margin: 5px;
-    	color: #333;
-    	text-decoration:none; 
-    	cursor:pointer; 
-	font-size: 18px;
-	font-family:Goli medium; 
-	letter-spacing:2px;
-	border: 1px solid white;
-	border-radius: 3px;
-	padding: 8px 15px;
-	background-color: #fff;
-	}
+    /* Top Navigation */
+    .top-links {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      letter-spacing: 2px;
+    }
 
-        .footer {
-	    font-family:MOELA light;
-            background-color: #333;
-            font-size: 18px;
-	    letter-spacing:2px;
-	    height: 40px;
-            color: #fff;
-            padding: 20px 0px;
-            text-align: center;
-	    line-height: 0.7;
-        }
+    /* Grid Layout for Song Sections */
+    .container {
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+    }
 
-        .top-links {
-            position: absolute;
-            top: 25px;
-            right: 25px;
-            font-size: 16px;
-	    letter-spacing:2px;
-	}
-        .top-links a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 20px;
-        }
+    .text2 {
+      height: 100vh;
+      font-size: 40px;
+      text-align: center;
+      font-family: ilyas;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-	.img-cont {
- 	    overflow: hidden;
-  	    position: absolute;
-  	    top: 120px;
-	}
+    .lyrics {
+      font-size: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: "Goli medium";
+    }
 
-	.img-cont2 {
- 	    overflow: hidden;
-  	    position: absolute;
-  	    top: 15px;
-	    left: 25px;
-	}
+    .credits {
+      font-size: 12px;
+      opacity: 0.5;
+      padding: 10px 15px;
+      font-family: "Goli medium";
+    }
 
-	.img-cont3 {
-  	    display: flex;
- 	    overflow: hidden;
-	    justify-content: center;
-	    padding: 20px;
-	}
+    /* Arrow Animation */
+    .arrow-down {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 40px;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+      color: #fff;
+    }
 
-	.container {
-	 height: 100vh;
-	 display: grid;
- 
-	 grid-template-columns: 1fr 1fr;
-	 column-gap: 0px;
-	}
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
 
-	img {
-  	    display: flex;
- 	    overflow: hidden;
-	    justify-content: left;
-	    max-height:100vh;
-	}
+    /* Footer */
+    .footer {
+      padding: 20px;
+      font-family: "Goli medium";
+      background-color: #333;
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: normal;
+      color: #fff;
+      text-align: center;
+      transform: scale(0.9, 1);
+    }
 
+    .footer p { margin: 0.5em 0; }
 
-	img2 {
-  	    display: flex;
- 	    overflow: hidden;
-	    justify-content: right;
-	    max-height:100vh;
-	}
-    </style>
+    .img-cont3 {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
 
+    .icon {
+      height: 35px;
+      width: 35px;
+      padding: 10px;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      .section {
+        height: 100vh;
+        background-size: auto 130%;
+        background-position: center center;
+      }
+
+      .section h1, .text h1 { font-size: 36px; letter-spacing: 2px; }
+      .section h2, .text h2 { font-size: 28px; letter-spacing: 2px; }
+      .section p, .text p { font-size: 14px; letter-spacing: 1px; line-height: 20px; }
+
+      a.one, a.two, a.three {
+        font-size: 14px;
+        letter-spacing: 1px;
+      }
+
+      .top-links { display: none; }
+
+      /* Container adjustments for mobile */
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: auto; /* content determines height */
+      }
+
+      .container > div:first-child {
+        width: 100%;
+        height: auto;
+      }
+
+      .container img {
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+        object-fit: cover;
+      }
+
+      .text2 {
+        font-size: 24px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .lyrics {
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 100%;
+      }
+
+      .credits {
+        font-size: 12px;
+        text-align: center;
+      }
+
+    .mobile {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      letter-spacing: 2px;
+      border: 2px solid white;
+      padding: 8px 8px;
+      border-radius: 4px;
+    }
+  }
+  @media (min-width: 601px) {
+    .mobile {display: none;}
+  }
+
+  </style>
 </head>
 <body>
 
-<div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild4.JPG');">
-    <h1>ONE YEAR EP</h1>
-    <p style="font-family: MOELA light; padding: 5px;"> Today I felt my heart decay. </p>
-    <p style="font-family: MOELA light; padding-bottom: 15px;"> It finally had come to realize that it cannot break another time. </p>
-    <a class = "three" href="oneyear.html"> projekt </a>
-    <a class = "three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen → </a>
-    <div class="arrow-down" style= "opacity:0">&#8964;</div>
+<!-- Example Section -->
+<div class="section" style="background-image: url('Subpage_übermich/Subpage_übermich_Fotos/Bild4.jpg');">
+  <h1>ONE YEAR EP</h1>
+  <p>Today I felt my heart decay.</p>
+  <p style="padding: 10px;">It finally had come to realize that it cannot break another time.</p>
+  <a class="three" href="oneyear.html">projekt</a>
+  <a class="three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen →</a>
+  <div class="arrow-down" style="opacity:0">&#8964;</div>
 </div>
 
-
-
+<!-- Top Navigation -->
+<div class="mobile">
+  <a class="one" style="padding:10px; justify-content: flex-start;" href="Mainpage.html">home</a>
+</div>
 <div class="top-links">
-  <a class = "one" href="Mainpage.html">home</a>
-  <a class = "one" href="Musik.html">musik</a>
-  <a class = "one" href="übermich.html">über mich</a>
-  <a class = "one" href="#footer">kontakt</a>
+  <a class="one" href="Mainpage.html">home</a>
+  <a class="one" href="Musik.html">musik</a>
+  <a class="one" href="übermich.html">über mich</a>
+  <a class="one" href="#footer">kontakt</a>
 </div>
 
-<div class="container", style="background-color:#f39347; ">
-      <div class="img">
-        <img src="Subpage_Musik/JuniperHeath.jpg">
-      </div>
-      <div class="text2", style= "position: relative; top: 15%;">
-        JUNIPER HEATH
-	<div class="lyrics"><br/> Deep in the forest we searched for a song,</div>
-	<div class="lyrics">far beneath the old trees crowned with golden leaves.</div>
-	<div class="lyrics">Looked for adventures in light woodland realms,</div>
-	<div class="lyrics">ran with wolves and called us the woods’ kings and queens,</div>
-	<div class="lyrics">Reached for the branches high above our heads,</div>
-	<div class="lyrics">Never lavished a thought to the end of our play.</div>
-	<div class="lyrics"><br/> Sweet dream, a fair melody,</div>
-	<div class="lyrics">harken the sound of the nightingales tale.</div>
-	<div class="lyrics">Sweet dream, who could believe,</div>
-	<div class="lyrics">We were the kin of the stars.</div> 
-	<div class="lyrics"><br/>From red leaves we built autumn crowns as we seeked,</div>
-	<div class="lyrics">secret  paths through the rye and juniper heath.</div>
-	<div class="lyrics">Followed a fawn in the underwoods lair,</div>
-	<div class="lyrics">but the crystallize roe rested dead by the stream.</div>
-	<div class="lyrics">A lament we sung as we buried its bones,</div>
-	<div class="lyrics">and the infinite sky  was a bit farther away.</div>
-	<div class="lyrics"><br/> Sweet dream, a fair melody,</div>
-	<div class="lyrics">remember the bittersweet nightingales tale.</div>
-	<div class="lyrics">Sweet dream, who could believe,</div>
-	<div class="lyrics">We were the kin of the stars.</div> 
-	<div class="lyrics" style = "font-size: 12px; text-align: Left; text-align: bottom left; padding: 70px 15px; opacity: 50%;">Songwriting |<br/>Producing |<br/> Master: Alex Vay </div>
-    </div>
+<!-- Song Sections -->
+<div class="container" style="background-color:#f39347;">
+  <div><img src="Subpage_Musik/JuniperHeath.jpg" alt="Juniper Heath"></div>
+  <div class="text2">
+    JUNIPER HEATH
+    <div class="lyrics"><br>Deep in the forest we searched for a song,</div>
+    <div class="lyrics">far beneath the old trees crowned with golden leafs.</div>
+    <div class="lyrics">Looked for adventures in light woodland realms,</div>
+    <div class="lyrics">ran with wolves and called us the woods’ kings and queens,</div>
+    <div class="lyrics">Reached for the branches high above our heads,</div>
+    <div class="lyrics">Never lavished a thought to the end of our play.</div>
+    <div class="lyrics"><br/> Sweet dream, a fair melody,</div>
+    <div class="lyrics">harken the sound of the nightingales tale.</div>
+    <div class="lyrics">Sweet dream, who could believe,</div>
+    <div class="lyrics">We were the kin of the stars.</div> 
+    <div class="lyrics"><br/>From red leaves we built autumn crowns as we seeked,</div>
+    <div class="lyrics">secret paths through the rye and juniper heath.</div>
+    <div class="lyrics">Followed a fawn in the underwoods lair,</div>
+    <div class="lyrics">but the crystallize roe rested dead by the stream.</div>
+    <div class="lyrics">A lament we sung as we buried its bones,</div>
+    <div class="lyrics">and the infinite sky was a bit farther away.</div>
+    <div class="lyrics"><br/> Sweet dream, a fair melody,</div>
+    <div class="lyrics">remember the bittersweet nightingales tale.</div>
+    <div class="lyrics">Sweet dream, who could believe,</div>
+    <div class="lyrics">We were the kin of the stars.</div> 
+    <div class="credits">Songwriting | Producing | Master: Alex Vay</div>
+  </div>
 </div>
 
-<div class="container", style="background-color:#6f4a37; align-items: right; column-gap: 0px; padding: 0 0;">
-
-      <div class="text2", style= "position: relative; top: 5%;">
-        YOU DON’T KNOW
+<div class="container" style="background-color:#6f4a37;">
+  <div><img src="Subpage_Musik/Youdontknow.jpg" alt="Youdontknow"></div>
+  <div class="text2">
+    YOU DON’T KNOW
 	<div class="lyrics"><br/> I want to fight, but I don’t know how.</div>
 	<div class="lyrics">Oh what am I doing now?</div>
-	<div class="lyrics">The doctors say take a pill or two.</div>
+	<div class="lyrics">The doctors say: Take a pill or two.</div>
 	<div class="lyrics">What good could that do?</div>
 	<div class="lyrics"><br/>Do not tell me  to simply smile</div>
 	<div class="lyrics">if you’ve never felt like you wanna die.</div>
@@ -323,32 +329,24 @@
 	<div class="lyrics">if you’ve never felt like you wanna die.</div>
 	<div class="lyrics">You don’t know what drowning in your thoughts is like,</div>
 	<div class="lyrics">blending out all of the light.</div>
-	<div class="lyrics"><br/>The way I feel like -</div>
-	<div class="lyrics">maybe I’m insane.</div>
-	<div class="lyrics">You think I’m happy,</div>
-	<div class="lyrics">but you don’t know.</div>
-	<div class="lyrics">The way I feel like -</div>
-	<div class="lyrics">maybe I’m insane.</div>
+	<div class="lyrics"><br/>The way I feel like - maybe I’m insane.</div>
+	<div class="lyrics">You think I’m happy, but you don’t know.</div>
+	<div class="lyrics">The way I feel like - maybe I’m insane.</div>
 	<div class="lyrics">You think I’m happy,</div>
 	<div class="lyrics">but you don’t know how it feels.</div>
 	<div class="lyrics"><br/>Do not tell me to simply smile</div>
 	<div class="lyrics">if you’ve never felt like you wanna die.</div>
 	<div class="lyrics">You don’t know what drowning in your thoughts is like,</div>
 	<div class="lyrics">blending out all of the light.</div>
-	<div class="lyrics" style = "font-size: 12px; text-align: right; text-align: right; padding: 10px 0px; opacity: 50%;">Songwriting: Alex Vay & Celina Schaller<br/>Producing |<br/> Master: Alex Vay </div>
-    </div>
-      <div class="img2" style="padding-left: 20px; align-items: right;">
-        <img src="Subpage_Musik/Youdontknow.jpg">
-      </div>
+	<div class="credits">Songwriting: Alex Vay & Celina Schaller<br/>Producing: Alex Vay <br/> Master: Steven Meißner </div>
+
+  </div>
 </div>
 
-
-<div class="container", style="background-color:#667da0;">
-      <div class="img">
-        <img src="Subpage_Musik/Feral2.jpg">
-      </div>
-      <div class="text2", style= "position: relative; top: 15%;">
-        FERAL
+<div class="container" style="background-color:#667da0;">
+  <div><img src="Subpage_Musik/Feral2.jpg" alt="Feral"></div>
+  <div class="text2">
+    FERAL
 	<div class="lyrics"><br/> Wild eyes, a blurry smile.</div>
 	<div class="lyrics">You seem so far, </div>
 	<div class="lyrics">yet I can feel the heat of life under your skin.</div>
@@ -369,59 +367,37 @@
 	<div class="lyrics"><br/>oh, to be where I know I now belong</div> 
 	<div class="lyrics">and we’ll be:</div>
 	<div class="lyrics">Feral.</div>
-	<div class="lyrics" style = "font-size: 12px; text-align: Left; text-align: bottom left; padding: 70px 15px; opacity: 50%;">Songwriting |<br/>Producing |<br/> Master: Alex Vay </div>
-    </div>
+	<div class="credits">Songwriting | Producing | Master: Alex Vay </div>
+  </div>
 </div>
 
-
-<div class="footer" id= "footer", style="height:50px;">
-    <p style="font-size:15px; font-weight:normal;"> Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825 </p>
-    <p> Kontakt: hier email adden </p>
-</div>
-<div class = "img-cont3"> 
-		<a class="one" href = "https://www.instagram.com/alexvay.music/"> <img src="Logos/INSTAGRAM.png" alt="Instagram" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-		<a class="one" href = "https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" style= "
-		height: 35px;
-		width: 35px;
-		padding: 10px;"> </a>
-	</div>
-<div class="footer" id= "footer", style="padding: 0;">
-    <p> &copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+<!-- Footer (unchanged) -->
+<div class="footer" id="footer">
+  <p>Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825</p>
+  <p>Kontakt: hier email einfügen</p>
 </div>
 
-
-
+  <div class="img-cont3">
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
+    <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
+    <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
+  </div>
+<div class="footer" style="padding: 20px;">
+  <p>&copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+</div>
 
 <script>
-    document.querySelector('.arrow-down').addEventListener('click', function() {
-        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
-    });
+  document.querySelector('.arrow-down').addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  });
 
-    // Parallax effect for all sections
-    window.addEventListener('scroll', function() {
-        const scrollPos = window.scrollY;
-        const parallax = scrollPos * 0.1; // Adjust the speed here (0.1 is relatively slow)
-        document.querySelectorAll('.section').forEach(function(section) {
-            section.style.backgroundPositionY = `-${parallax}px`;
-       
-
- });
+  window.addEventListener('scroll', function() {
+    const parallax = window.scrollY * 0.1;
+    document.querySelectorAll('.section').forEach(section => {
+      section.style.backgroundPositionY = `-${parallax}px`;
     });
+  });
 </script>
-
 </body>
 </html>
-
-
-
