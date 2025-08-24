@@ -218,6 +218,7 @@
 
       .top-links { display: none; }
 
+		.footer { fontsize:14px; }
       /* Container adjustments for mobile */
       .container {
         display: flex;
@@ -397,7 +398,7 @@
   <p>&copy; 2025 Alex Vay | <a class="one" href="Impressum.html">Impressum | Datenschutz</a></p>
 </div>
 
-<script>
+<script> if (window.innerWidth >= 601px)
   document.querySelector('.arrow-down').addEventListener('click', function() {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
@@ -411,6 +412,7 @@
 </script>
 </body>
 </html>
+
 
 
 
