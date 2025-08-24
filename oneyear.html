@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Vay - one year EP</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #333;
+  }
+
+  /* General section styles */
+  .section {
+    height: 56.25vw;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box;
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-position 0.1s ease-in-out;
+    text-align: center;
+    overflow: visible;
+  }
+
+
+
+  .section h1, .section h2 {
+    font-family: "ilyas";
+    letter-spacing: 4px;
+    margin: 0 0 5px;
+  }
+
+  .section h1, .text h1 {
+    font-size: 90px;
+    font-weight: normal;
+  }
+
+  .section h2, .text h2 {
+    font-size: 40px;
+  }
+
+  .section p, .text p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: 0;
+    font-family: "Goli medium";
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .section p.kleiner {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 22px;
+  }
+
+  /* Link styles */
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  a.one, a.two {
+    font-family: "Goli medium";
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    /* IMPORTANT: no padding here, like on mainpage */
+    transform: scale(1, 1);
+  }
+  a.two { font-family: "Goli medium"; font-size: 18px; }
+  a.one:hover, a.two:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  a.three {
+    display: inline-block;
+    margin: 5px;
+    font-family: "Goli medium";
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 8px 15px;
+    border-radius: 3px;
+  }
+  a.three:hover {
+    background-color: #fff;
+    color: #333;
+  }
+
+  /* Logo & icon containers (match mainpage spacing) */
+  .img-cont, .img-cont2, .img-cont3 {
+    overflow: hidden;
+    position: absolute;
+  }
+  .img-cont { top: 20%; }
+  .img-cont2 { top: 15px; left: 25px; }
+  .img-cont3 {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 20px; /* same as mainpage */
+  }
+  .icon {
+    height: 35px;
+    width: 35px;
+    padding: 10px; /* same as mainpage */
+  }
+
+  /* Arrow animation */
+  .arrow-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    color: #fff;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+
+  /* Footer (exactly like mainpage) */
+  .footer {
+    padding: 20px;
+    font-family: "Goli medium";
+    background-color: #333;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    transform: scale(0.9, 1);
+  }
+  .footer p { margin: 0.5em 0; }
+
+  /* Navigation */
+  .top-links {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    letter-spacing: 2px;
+  }
+
+    .lyrics {
+      font-size: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: "Goli medium";
+    }
+
+    .credits {
+      font-size: 15px;
+      opacity: 0.5;
+      padding: 2px 0px;
+      font-family: "Goli medium";
+    }
+
+
+
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    .wrapper { width: 100%; padding: 0; }
+
+    .section {
+      height: 100vh;
+      background-size: auto 130%;
+      background-position: center center;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      background-repeat: no-repeat;
+    }
+
+    .section h1 {
+      font-size: 36px;
+      letter-spacing: 2px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+    .section p {
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 30px 40px;
+    }
+
+    /* Footer behaviour 
+    .footer{
+      font-size: 14px;
+    } 
+    */
+
+  
+
+    /* .text mobile behavior */
+
+    .section p.kleiner {font-size: 14px; letter-spacing: 1px; line-height: 20px;}
+
+    a.one, a.two { font-size: 14px; letter-spacing: 1px; }
+    a.three { font-size: 14px; padding: 6px 10px; letter-spacing: 1px; }
+
+    .img-cont2 {
+      display: flex;
+      justify-content: center;
+      width: 90%;
+      height: 10%;
+    }
+    .icon { padding: 10px 20px; } /* same as mainpage mobile */
+
+    .top-links { display: none; }
+
+    .mobile {
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      letter-spacing: 2px;
+      border: 2px solid white;
+      padding: 8px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  @media (min-width: 601px) {
+    .mobile {display: none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+
+  <!-- Hero Section -->
+
+
+  <div class="section" style="background-image: url('Mainpage_Fotos/OneyearCover_smaller.jpg');">
+    <h1>ONE YEAR</h1>
+    <p style = "padding: 0 0;"> Today I felt my heart decay. </p>
+    <p style="padding: 10px;">It finally had come to realize that it cannot break another time.</p>
+    <a class="three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">jetzt auf spotify streamen →</a>
+    <div class="arrow-down" style="opacity:0">&#8964;</div>
+  </div>
+
+
+  <!-- Top Navigation -->
+  <div class="mobile">
+    <a class="one" style="padding:10px; justify-content: flex-start;" href="Mainpage.html">home</a>
+  </div>
+  <div class="top-links">
+    <a class="one" style="padding:10px;" href="Mainpage.html">home</a>
+    <a class="one" style="padding:10px;" href="Musik.html">musik</a>
+    <a class="one" style="padding:10px;" href="übermich.html">über mich</a>
+    <a class="one" style="padding:10px;" href="#footer">kontakt</a>
+  </div>
+
+  <iframe data-testid="embed-iframe" style="border-radius:12px" 
+  src="https://open.spotify.com/embed/track/5jelQCCTZmlWO2A84DeTAn?utm_source=generator" 
+  width="100%" height="352" frameBorder="0" 
+  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+  </iframe>
+
+
+
+  <!-- Sections -->
+
+  <div class="section" style="background-image: url('Subpage_oneyear/rotblau.jpg'); ">
+    <h2>TODAY I NOTICED I HAVE BEEN ALIVE</h2>
+     <div class="lyrics"><br>... and what if all tears disappear in the rain</div>
+    <div class="lyrics">and every scream is drowned by the music I make,</div>
+    <div class="lyrics">no tomorrow ever felt welcome to me</div>
+    <div class="lyrics">and no kiss did excite me?</div>
+    <div class="lyrics"><br/>I’ve forgotten to feel,</div>
+    <div class="lyrics">I’ve unlearned how to breath.</div>
+    <div class="lyrics"><br/>Didn’t even come to realize:</div>
+    <div class="lyrics">In my head I died a long time ago ...</div>
+  </div>
+
+  <div class="section" style="background-image: url('Subpage_oneyear/Oneyear_screenshot2.jpg');">
+    <div class="credits">Songwriting und Recording: Alex Vay</div>
+    <div class="credits">Mixing: Marcel Heinsch</div>
+    <div class="credits">Mastering: Dominik Back</div>
+    <div class="credits">Spezieller Dank an Noah Friebel und Celina Schaller für die Bereitstellung von Equipment.</div>
+  </div>
+
+  <div class="section" style="background-image: url('Subpage_oneyear/mond3.jpg');">
+    <h2>ONE YEAR</h2>
+     <div class="lyrics"><br>... One year is not enough to see</div>
+    <div class="lyrics">you growing up beside me.</div>
+    <div class="lyrics">You were the child that adored all the games I created,</div>
+    <div class="lyrics">Never knowing I just did it </div>
+    <div class="lyrics">to see the light in your eyes.</div>
+    <div class="lyrics"><br/>And you’ve always seen</div>
+    <div class="lyrics">all the good in me ...</div>
+  </div>
+
+  <div class="section" style="background-image: url('Subpage_oneyear/oneyearscreenshot3.jpg');">
+    <!-- <h2 style = "opacity: 0.5;"> MUSIK </h2> -->
+    <a class="three" href="https://open.spotify.com/intl-de/track/5jelQCCTZmlWO2A84DeTAn">one year musikvideo →</a>
+    <div class="credits">Fotografie: Alex Vay | Jasmin Curtz</div>
+    <div class="credits">Videografie: Melvin Heinsch | Jasmin Curtz | Alex Vay</div>
+    <div class="credits">Licht: Jasmin Curtz</div>
+    <div class="credits">Schnitt: Alex Vay</div>
+  </div>
+
+  <div class="section" style="background-image: url('Subpage_oneyear/morebaum.jpg');">
+    <h2>MORE THAN I MEANT TO</h2>
+    <div class="lyrics"><br/>... Today I noticed I’ve been alive one year more than I meant</div>
+    <div class="lyrics">more than I would have spent,</div>
+    <div class="lyrics">more days to remember,</div>
+    <div class="lyrics">more days to pretend </div>
+    <div class="lyrics">that my head holds no chaos</div>
+    <div class="lyrics">and my heart does not ache,</div>
+    <div class="lyrics">my skin is not crawling,</div>
+    <div class="lyrics">I do not depend</div>
+    <div class="lyrics">on pills that I treasure </div>
+    <div class="lyrics">like an old friend</div>
+    <div class="lyrics">’til one day I might say</div>
+    <div class="lyrics">I don’t want this to end.</div>
+    <div class="lyrics"><br/>All I fear - more.</div>
+    <div class="lyrics">All I want - more.</div>
+  </div>
+
+  <!-- Contact Footer (exact same layout as mainpage) -->
+  <div class="footer" id="footer">
+    <p>Für Booking- und Producinganfragen, oder falls du mir einfach schreiben möchtest &#9825;</p>
+    <p>Kontakt: hier email einfügen</p>
+  </div>
+  <div class="img-cont3">
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/INSTAGRAM.png" alt="Instagram" class="icon"></a>
+    <a class="one" href="https://open.spotify.com/intl-de/artist/2aG8uOvBEXdUQc4sZ82ri8"><img src="Logos/SPOTIFY.png" alt="Spotify" class="icon"></a>
+    <a class="one" href="https://www.tiktok.com/@alexvay"><img src="Logos/TIKTOK.png" alt="Tiktok" class="icon"></a>
+    <a class="one" href="https://www.instagram.com/alexvay.music/"><img src="Logos/YOUTUBE.png" alt="Youtube" class="icon"></a>
+  </div>
+  <div class="footer" style="padding: 20px;">
+    <p>&copy; 2025 Alex Vay | <a class="one" href="#">Impressum | Datenschutz</a></p>
+  </div>
+
+</div>
+
+<script>
+  document.querySelector('.arrow-down').addEventListener('click', function() {
+    window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', function() {
+    const parallax = window.scrollY * 0.1;
+    document.querySelectorAll('.section').forEach(function(section) {
+      section.style.backgroundPositionY = `-${parallax}px`;
+    });
+  });
+</script>
+
+</body>
+</html>
