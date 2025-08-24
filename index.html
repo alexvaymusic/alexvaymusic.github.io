@@ -274,17 +274,20 @@
 
 </div> <!-- end wrapper -->
 
-<script> if (window.innerWidth >= 601)
-  document.querySelector('.arrow-down').addEventListener('click', () => {
+<script> 
+	if (window.innerWidth >= 601){
+  document.querySelector('.arrow-down').addEventListener('click', function() {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', function() {
     const parallax = window.scrollY * 0.1;
-    document.querySelectorAll('.section').forEach(section => {
+    document.querySelectorAll('.section').forEach(function(section) {
       section.style.backgroundPositionY = `-${parallax}px`;
     });
-  });
+  });}
+if (window.innerWidth < 601){
+}
 </script>
 
 </body>
