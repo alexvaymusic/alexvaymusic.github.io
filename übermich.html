@@ -335,7 +335,8 @@
 
 </div>
 
-<script> if (window.innerWidth >= 601)
+<script> 
+	if (window.innerWidth >= 601){
   document.querySelector('.arrow-down').addEventListener('click', function() {
     window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
   });
@@ -345,11 +346,14 @@
     document.querySelectorAll('.section').forEach(function(section) {
       section.style.backgroundPositionY = `-${parallax}px`;
     });
-  });
+  });}
+if (window.innerWidth < 601){
+}
 </script>
 
 </body>
 </html>
+
 
 
 
